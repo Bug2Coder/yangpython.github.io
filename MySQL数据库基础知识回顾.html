@@ -1,0 +1,55 @@
+###MySQL数据库基础操作
+
+####1:登录和登出数据库
+
+登录命令:mysql -u用户名 -p密码
+
+退出命令:quit,exit或ctrl + d
+
+查看版本号:select version()
+
+显示当前时间: slelect now()
+
+####2:数据库操作
+
+查看数据库:show databases
+
+创建数据库:create database 数据库名 charset=utf8
+
+使用数据库:use 数据库名
+
+删除数据库:drop database 数据库名
+
+####3:数据表操作
+
+查看数据表:show tables
+
+创建数据表:create table 数据表名(id int unsigned primary key auto_increment,
+字段2 约束, 字段3,约束
+)
+
+####删除数据表:drop table 表名
+
+查看数据表结构:desc 数据表名
+
+查看表的创建语句:show create table 表名
+
+####4:数据表字段操作
+
+字段添加:alter table 表名 add 字段名 约束
+
+修改字段:alter table 表名 change 原字段名 新字段名 约束
+
+修改约束:alter table 表名 modify 字段名 新约束
+
+删除字段:alter table 表名 drop 字段名
+
+####5:表数据操作
+
+数据查询:select 查询内容(多个字段名,最大值等,求和,平均值等) from 表名 
+
+数据增加:insert into 表名(字段名) values(对应字段数据)
+
+数据修改:update 表名 set 字段1 = 新值,字段2 = 新值 where 条件
+
+数据删除:delete from 表名 where 条件    注:没有条件则为清空整个表的数据
